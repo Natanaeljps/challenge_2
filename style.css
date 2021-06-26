@@ -1,0 +1,170 @@
+@media (min-width: 375px) {
+  * {
+    margin: 0rem;
+    padding: 0rem;
+    box-sizing: border-box;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  html {
+    background-color: var(--back-button-color);
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  body {
+    margin: var(--margin);
+  }
+
+  .container {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+
+  :root {
+    --margin: 5rem 1.5rem;
+    /*===Fonts==*/
+    --font--title: 700 2rem 'Big Shoulders Display', sans-serif;
+    --font--text: 400 0.8rem 'Lexend Deca', sans-serif;
+    /*===colors===*/
+    --orange-color: hsl(31, 77%, 52%);
+    --cyan--color: hsl(184, 100%, 22%);
+    --dark-cyan-color: hsl(179, 100%, 13%);
+    --text-color: hsl(0, 0%, 100%, 0.75);
+    --back-button-color: hsl(0, 0%, 95%);
+  }
+
+  /*Layout*/
+  h1 {
+    padding: 1rem 0;
+    font: var(--font--title);
+    color: var(--text-color);
+  }
+
+  p {
+    font: var(--font--text);
+    color: var(--text-color);
+    line-height: 1.3rem;
+  }
+
+  a {
+    padding: 0;
+  }
+
+  a:hover {
+    color: var(--text-color);
+  }
+
+  div.container #learn {
+    margin-top: 2rem;
+    padding: 0.5rem 1.5rem;
+    border: solid 0.2em var(--text-color);
+    border-radius: 1.4rem 1.4rem;
+    color: var(--text-color);
+  }
+
+  /*===SEDANS==*/
+
+  div.container #sedans {
+    padding: 2rem;
+    border-radius: 0.63rem 0.63rem 0 0;
+    background: var(--orange-color);
+  }
+
+  div.container #sedans button:hover,
+  div.container #sedans a:hover {
+    background: var(--orange-color);
+    color: var(--text-color);
+    transition: 0.3s;
+  }
+
+  div.container #sedans a {
+    font: var(--font--text);
+    color: var(--orange-color);
+  }
+
+  /*===SUVS==*/
+
+  div.container #suvs {
+    padding: 2rem;
+    background: var(--cyan--color);
+  }
+
+  div.container #suvs button:hover,
+  div.container #suvs a:hover {
+    background: var(--cyan-color);
+    color: var(--text-color);
+    transition: 0.3s;
+  }
+
+  div.container #suvs a {
+    font: var(--font--text);
+    color: var(--cyan--color);
+  }
+
+  /*===LUXURY==*/
+
+  div.container #luxury {
+    padding: 2rem;
+    border-radius: 0 0 0.63rem 0.63rem;
+    background: var(--dark-cyan-color);
+  }
+
+  div.container #luxury button:hover,
+  div.container #luxury a:hover {
+    background: var(--dark-cyan-color);
+    color: var(--text-color);
+    transition: 0.3s;
+  }
+
+  div.container #luxury a {
+    font: var(--font--text);
+    color: var(--dark-cyan-color);
+  }
+}
+
+/*========MEDIA QUERIES========*/
+/* EXTRA LARGE DEVICES: > 1440 */
+@media (min-width: 1440px) {
+  :root {
+    --margin: 20rem 20rem;
+    /*===Fonts==*/
+    --font--title: 700 2rem 'Big Shoulders Display', sans-serif;
+    --font--text: 400 0.8rem 'Lexend Deca', sans-serif;
+  }
+
+  body {
+    margin: var(--margin);
+  }
+
+  img {
+    width: 64px;
+    height: 40px;
+  }
+
+  .container {
+    display: flex;
+  }
+
+  /*===cars==/==================*/
+
+  div#sedans.container.grid {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.63rem 0 0 0.63rem;
+  }
+
+  div#suvs.container.grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  div#luxury.container.grid {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0 0.63rem 0.63rem 0;
+  }
+}
